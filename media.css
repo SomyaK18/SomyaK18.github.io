@@ -5,7 +5,10 @@
     }
     .home, .about{
         flex-direction: column;
-        padding: 20px 5%;
+        padding-top:auto;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 150px;
         gap: 3em;
     }
     .home-content h3 {
@@ -54,7 +57,7 @@
     .btn-box {
         width: 100%;
         flex-direction: column;
-        gap: 1em;
+        gap:1rem;
     }
 
     .btn-1, .btn-2 {
@@ -98,7 +101,6 @@
 
     .home-content p {
         font-size: 16px;
-        padding-bottom: 10px;
     }
     .skills{
         padding-bottom: 60px;

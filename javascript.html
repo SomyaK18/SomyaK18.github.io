@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Concepts Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Concepts Demonstration</h1>
+
+    <h2>Variables and Data Types</h2>
+    <button onclick="showVariables()">Show Variables</button>
+    <pre id="variablesOutput" class="result"></pre>
+
+    <h2>Operators and Control Structures</h2>
+    <button onclick="demonstrateOperators()">Demonstrate Operators</button>
+    <pre id="operatorsOutput" class="result"></pre>
+
+    <h2>Objects and Error Handling</h2>
+    <button onclick="showObject()">Show Object</button>
+    <pre id="objectOutput" class="result"></pre>
+
+    <script>
+        // Variables and Data Types
+        function showVariables() {
+            let number = 42;
+            const bigInt = BigInt(1234567890123456789012345678901234567890n);
+            let text = "Hello, JavaScript!";
+            let isValid = true;
+            let uniqueId = Symbol('id');
+            let notDefined;
+            let emptyValue = null;
+
+            document.getElementById('variablesOutput').textContent = `
+Number: ${number}
+BigInt: ${bigInt}
+String: ${text}
+Boolean: ${isValid}
+Symbol: ${uniqueId.toString()}
+Undefined: ${notDefined}
+Null: ${emptyValue}
+`;
+        }
+
+        // Operators and Control Structures
+        function demonstrateOperators() {
+            let result = '';
+
+            // Arithmetic Operators
+            let sum = 5 + 3;
+            let difference = 10 - 7;
+            let product = 4 * 2;
+            let quotient = 20 / 4;
+
+            // Comparison Operators
+            let isEqual = (5 == 5);
+            let isIdentical = (5 === '5');
+            let isGreater = (10 > 5);
+
+            // Logical Operators
+            let andOperation = (true && false);
+            let orOperation = (true || false);
+
+            // Ternary Operator
+            let ternaryResult = (5 > 3) ? 'True' : 'False';
+
+            // Control Structures
+            for (let i = 0; i < 3; i++) {
+                result += `Loop ${i + 1}\n`;
+            }
+
+            // Switch Statement
+            let day = 'Monday';
+            switch(day) {
+                case 'Monday':
+                    result += 'Start of the work week.\n';
+                    break;
+                case 'Friday':
+                    result += 'End of the work week.\n';
+                    break;
+                default:
+                    result += 'Midweek day.\n';
+            }
+
+            document.getElementById('operatorsOutput').textContent = `
+Arithmetic Operators:
+Sum: ${sum}
+Difference: ${difference}
+Product: ${product}
+Quotient: ${quotient}
+
+Comparison Operators:
+Equal (==): ${isEqual}
+Identical (===): ${isIdentical}
+Greater Than (>): ${isGreater}
+
+Logical Operators:
+AND Operation: ${andOperation}
+OR Operation: ${orOperation}
+
+Ternary Operator:
+5 > 3 ? 'True' : 'False' = ${ternaryResult}
+
+Control Structures:
+${result}
+`;
+        }
+
+        // Objects and Error Handling
+        function showObject() {
+            try {
+                const car = {type: "Fiat", model: "500", color: "white"};
+                const person = {};
+                person.firstName = "John";
+                person.lastName = "Doe";
+
+                const objectInfo = `
+Car: Type = ${car.type}, Model = ${car.model}, Color = ${car.color}
+Person: First Name = ${person.firstName}, Last Name = ${person.lastName}
+`;
+
+                document.getElementById('objectOutput').textContent = objectInfo;
+
+            } catch (error) {
+                document.getElementById('objectOutput').textContent = `Error: ${error.message}`;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-//Assume we are fetching the data from a rest endpoint in the get data function.
+
 function getData(uId) {
     return new Promise((resolve) => {
         setTimeout(() => {

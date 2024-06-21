@@ -16,5 +16,3 @@ fName='Somya';
 lName='Kakarla';      
 let res=getInitials(fName,lName);
 console.log("First letter of "+fName+" "+lName+" is: "+res);
-let res1=getInitials('Roger','Waters');
-console.log("First letter of Roger Waters is: "+res1);
